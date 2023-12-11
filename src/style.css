@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'lato';
+  src: url('./font/lato/lato-bold-webfont.woff2') format('woff2'),
+    url('./font/lato/lato-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: bold;
+
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('./font/lato/lato-regular-webfont.woff2') format('woff2'),
+    url('./font/lato/lato-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./font/inter/inter-thin-webfont.woff2') format('woff2'),
+    url('./font/inter/inter-thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+:root {
+  --base-color:#f9f9f9;
+  --base-color-shadow-main: #646464;
+  --base-color-shadow-secondary: #aeaeae;
+  --base-font-color: #1f2b37;
+  --base-margin: calc(2.5rem + calc(1vw + 1vh));
+  --base-padding: calc(1.5rem + calc(0.5vw + 0.5vh));
+  --main-heading-font-size: calc(1.75rem + calc(0.25vw + 0.25vh));
+  --name-heading-font-size: calc(2.5rem + calc(0.25vw + 0.25vh));
+  --main-medium-font-size: 1rem;
+  --header-img-expansion: 4rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "lato", sans-serif;
+}
+
+#content {
+  display: flex;
+  max-width: 1980px;
+  background-color: var(--base-color);
+  color: var(--base-font-color);
+  flex: 1;
+}
+
+.about-me {
+  margin: var(--base-margin);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0 1rem var(--base-color-shadow-secondary);
+}
+
+.about-me .main-heading {
+  font-size: var(--main-heading-font-size);
+  margin: 0;
+}
+
+.about-me article {
+  grid-column: 2/4;
+  padding: var(--base-padding);
+}
+
+.about-me p {
+  font-size: var(--main-medium-font-size);
+}
+
+.header-img  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-img img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% + var(--header-img-expansion));
+}
+
+.header-img h1 {
+  font-family: "inter", "lato", sans-serif;
+  font-weight: 100;
+  position: absolute;
+  bottom:  calc(calc(var(--header-img-expansion) * -1) + calc(var(--name-heading-font-size) * 0.5));
+  font-size: var(--name-heading-font-size);
+  text-shadow: 0 3px 3px var(--base-color-shadow-main);
+  z-index: 2;
+  color: var(--base-color);
+}
+
+.navigation-list {
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  list-style: none;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
