@@ -54,6 +54,7 @@ body {
 }
 
 .about-me-container {
+  width: 100%;
   background: linear-gradient(170deg, var(--base-accent-color) 50%, var(--base-color) 50.15%);
 }
 
@@ -76,6 +77,7 @@ body {
 
 .about-me p {
   font-size: var(--main-medium-font-size);
+  max-width: 72ch;
 }
 
 .header-img  {
