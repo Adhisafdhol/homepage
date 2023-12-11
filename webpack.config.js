@@ -8,7 +8,7 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
-    static: "./dist",
+    static: ["./dist", "./src"],
     watchFiles: ["./src/*.html"],
     hot: true,
   },
