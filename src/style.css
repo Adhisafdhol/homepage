@@ -125,6 +125,10 @@ body {
   margin: 0 var(--base-margin);
 }
 
+.main-work h1 {
+ font-size: var(--name-heading-font-size);
+}
+
 .project-list {
   display: grid;
   gap: var(--base-padding);
@@ -193,6 +197,10 @@ body {
      left: 70%;
     }
 
+    .project-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -251,5 +259,9 @@ body {
   .navigation-list {
     justify-content: center;
   }
+
+    .project-list {
+      grid-template-columns: 1fr;
+    }
 
 }
