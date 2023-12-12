@@ -29,11 +29,13 @@
   --base-color:#f9f9f9;
   --base-color-shadow-main: #646464;
   --base-color-shadow-secondary: #282b2c;
+  --base-color-shadow-light: #aeaeae;
   --base-accent-color: #393D3F;
   --base-font-color: #1f2b37;
   --base-margin: calc(2.5rem + calc(1vw + 1vh));
   --base-padding: calc(1.25rem + calc(0.5vw + 0.5vh));
   --main-heading-font-size: calc(1.75rem + calc(0.25vw + 0.25vh));
+  --project-heading-font-size: calc(1.5rem + calc(0.25vw + 0.25vh));
   --name-heading-font-size: calc(2.5rem + calc(0.25vw + 0.25vh));
   --main-medium-font-size: 1rem;
   --header-img-expansion: 4rem;
@@ -47,6 +49,7 @@ body {
 
 #content {
   display: flex;
+  flex-direction: column;
   max-width: 1980px;
   background-color: var(--base-color);
   color: var(--base-font-color);
@@ -108,13 +111,64 @@ body {
 .navigation-list {
   margin: 0;
   display: flex;
+  gap: 0.5rem;
   justify-content: end;
   list-style: none;
 }
 
 .icon {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+}
+
+.main-work {
+  margin: 0 var(--base-margin);
+}
+
+.project-list {
+  display: grid;
+  gap: var(--base-padding);
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: var(--base-margin);
+}
+
+.project {
+  box-shadow: 0 0 0.5rem var(--base-color-shadow-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.project > img {
+  height: 200px;
+  background-color: var(--base-accent-color);
+}
+
+.project > .project-desc {
+  display: flex;
+  padding: 0.75em;
+  flex-direction: column;
+}
+
+.project-header {
+  display: flex;
+  align-items: end;
+}
+
+.project-header h1{
+  font-size: var(--project-heading-font-size);
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+}
+
+.project-header .navigation-list {
+  margin: 0;
+  padding: 0;
+}
+
+.project p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 @media (max-width: 768px) {
