@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aadheuss/homepage.git"
+    "url": "git+https://github.com/Adhisafdhol/homepage.git"
   },
   "keywords": [],
-  "author": "Aadheuss",
+  "author": "Adhisafdhol",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aadheuss/homepage/issues"
+    "url": "https://github.com/Adhisafdhol/homepage/issues"
   },
-  "homepage": "https://github.com/Aadheuss/homepage#readme",
+  "homepage": "https://github.com/Adhisafdhol/homepage#readme",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
